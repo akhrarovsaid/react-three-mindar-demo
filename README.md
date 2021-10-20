@@ -2,7 +2,9 @@
 
 A simple demo app for natural feature tracking using the excellent [MindAR library](https://github.com/hiukim/mind-ar-js/tree/master/) with ThreeJS.
 
-![Demo video of simple cube scene](/public/ar-demo.gif)
+| Demo gif | Image target | 
+| --- | --- | 
+![Demo video of simple cube scene](/public/ar-demo.gif) | ![MindAR image target](/public/image-target.png)
 
 ## Description
 
