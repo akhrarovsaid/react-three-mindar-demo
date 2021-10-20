@@ -62,7 +62,7 @@ function App() {
             antialias: true  
         })
 
-        renderer.setClearColor('#000000', 0)
+        renderer.setClearColor(0x000000, 0)
         renderer.setSize(window.innerWidth, window.innerHeight)
 
         rendererRef.current = renderer        
