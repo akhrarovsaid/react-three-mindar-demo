@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# React-Three-MindAR Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple demo app for natural feature tracking using the excellent [MindAR library](https://github.com/hiukim/mind-ar-js/tree/master/) with ThreeJS.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+The main part of the app can be found in the src/components/App.tsx file. In src/mind.d.ts you'll find a global declaration, since this project uses Typescript, to help with accessing the MindAR controller.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installing
+After grabbing the code:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+npm i 
 
-### `npm test`
+or
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+yarn i
+```
 
-### `npm run build`
+### Running
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+or 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+yarn start
+```
+The app immediately launches into the webcam and runs the MindAR controller setup. Give it a few seconds to warm up.
 
-### `npm run eject`
+## Final Notes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* For the purpose of being simple, this demo doesn't support multi-nft capabilities. However, adding multiple markers shouldn't be much trouble after inspecting the code and referencing the [MindAR docs](https://hiukim.github.io/mind-ar-js-doc/) and the MindAR source. 
+* All of the logic is in a single 'App' component. An improvement would be to lift state to multiple smaller components. For example, hook MindAR via a context provider. See [artcom/react-three-arjs](https://github.com/artcom/react-three-arjs) for a comprehensive example of what I mean. This pattern lends itself really well to multi-nft and also integration with the react-three-fiber package.
+* I'm using a screenshot of the create-react-app landing-page logo as an image target. Generally, this was a poor decision. Square markers with low contrast and high symmetry act as terrible markers. You'll likely want to test out multiple different target images. You can use the [MindAR Compiler tool](https://hiukim.github.io/mind-ar-js-doc/tools/compile) to help you.
