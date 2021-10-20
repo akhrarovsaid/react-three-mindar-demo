@@ -2,6 +2,8 @@
 
 A simple demo app for natural feature tracking using the excellent [MindAR library](https://github.com/hiukim/mind-ar-js/tree/master/) with ThreeJS.
 
+![Demo video of simple cube scene](/public/ar-demo.gif)
+
 ## Description
 
 The main part of the app can be found in the src/components/App.tsx file. In src/mind.d.ts you'll find a global declaration, since this project uses Typescript, to help with accessing the MindAR controller.
